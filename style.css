@@ -1,0 +1,41 @@
+
+body {
+   background-image:url('23.jpg');
+
+  }
+
+  header {
+    background-color: black;
+    color: white;
+    padding: 0.2em;
+    
+  }
+
+    h1 {
+    font-size: 18px;
+    font-family: monospace;
+    color:black;
+  }
+
+   p {
+    font-size: 15px;
+    font-family: monospace;
+    color:black;
+  }
+
+    div {
+    font-size: 19px;
+    font-family: monospace;
+    color:black;
+    background-color:yellow;
+  }
+
+  button {
+    font-size: 17px;
+    font-family: monospace;
+  }
+
+  button:hover {
+  transform: scale(1.2);
+}
+
