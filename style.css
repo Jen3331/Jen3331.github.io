@@ -1,0 +1,79 @@
+
+body {
+   background-color:white ;
+
+  }
+
+  header {
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    
+  }
+
+    h1 {
+    font-size: 15px;
+    font-family: monospace;
+    color:black;
+    text-align: center;
+    
+  }
+
+   p {
+    font-size: 15px;
+    font-family: monospace;
+    color:black;
+  }
+
+    div {
+    font-size: 19px;
+    font-family: monospace;
+    color:black;
+    background-color:goldenrod;
+  }
+
+
+  #NT {
+    font-size: 15px;
+    font-family: monospace;
+    color:black;
+    background-color:darkgray;
+  }
+  #KL {
+    font-size: 15px;
+    font-family: monospace;
+    color:black;
+    background-color:white;
+  }
+
+  #HKI {
+    font-size: 15px;
+    font-family: monospace;
+    color:black;
+    background-color:darkgray;
+  }
+
+  a {
+    font-size: 19px;
+    font-family: monospace;
+    color:black;
+    background-color:lightcoral;
+  }
+
+  button {
+    font-size: 15px;
+    font-family: monospace;
+    background-color:yellow;
+  }
+
+  button:hover {
+  transform: scale(1.2);
+}
+
+  .smaller-image {
+    width: 50px;
+  }
+
+ .larger-text {
+    font-size: 17px;
+  }
