@@ -1,0 +1,96 @@
+
+body {
+   background-color:white ;
+
+  }
+
+  header {
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    
+  }
+
+    h1 {
+    font-size: 15px;
+    font-family: monospace;
+    color:black;
+    text-align: center;
+    
+  }
+
+   p {
+    font-size: 15px;
+    font-family: monospace;
+    color:black;
+  }
+
+
+#cuisineDisplay{
+    font-size: 19px;
+    font-family: monospace;
+    color:black;
+    background-color:goldenrod;
+    text-align:center;
+
+}
+
+
+  #NT {
+    font-size: 15px;
+    font-family: monospace;
+    color:black;
+    background-color:lightgoldenrodyellow;
+    float:left;
+    width:33%;
+
+  }
+  #KL {
+    font-size: 15px;
+    font-family: monospace;
+    color:black;
+    background-color:whitesmoke;
+      float:left;
+    width:33%;
+ 
+  }
+
+  #HKI {
+    font-size: 15px;
+    font-family: monospace;
+    color:black;
+    background-color:lightgoldenrodyellow;
+      float:left;
+    width:33%;
+
+  }
+
+/*
+  a {
+    font-size: 19px;
+    font-family: monospace;
+    color:black;
+    background-color:lightcoral;
+  }
+*/
+
+  button {
+    font-size: 15px;
+    font-family: monospace;
+    background-color:yellow;
+    float:top;
+    width:100%;
+  }
+
+  button:hover {
+  transform: scale(1.2);
+ 
+}
+
+  .smaller-image {
+    width: 50px;
+  }
+
+ .larger-text {
+    font-size: 17px;
+  }

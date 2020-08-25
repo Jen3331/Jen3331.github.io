@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>食店生成器</title>
+    </head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<header>
+
+  <img class="smaller-image yellow-border" src="yellow.jpg"> <strong>食店生成器</strong>
+</header>
+
+  <body>
+    <h1><b><em>非洲每過60秒就有一分鐘過去，每次諗食咩就有十分鐘過去</em></b></h1>
+   
+ <script src="javascript.js"></script>
+   
+   <b><div id="cuisineDisplay"></div></b>
+
+<!--
+  with div:
+<a href="#" onclick="genURL();" target="_blank"><div id="cuisineDisplay"></div></a> 
+
+without div:
+<a id="cuisineDisplay" href="#" onclick="genURL()"></a>
+-->
+
+<p class="larger-text"> <b>選擇地區</b></p>
+
+<div id="NT">
+<u>新界</u>：
+      <br>元朗區 <label for="YuenLong"><input onclick="newCuisine(this);" id="YuenLong" type="radio" name="place" value="YuenLong">元朗</label>
+      <label for="TinShuiWai"><input onclick="newCuisine(this);" id="TinShuiWai" type="radio" name="place" value="TinShuiWai">天水圍</label>
+
+      <br> 北區 <label for="SheungShui"><input onclick="newCuisine(this);" id="SheungShui" type="radio" name="place" value="SheungShui">上水</label>
+      <label for="Fanling"><input onclick="newCuisine(this);" id="Fanling" type="radio" name="place" value="Fanling">粉嶺</label>
+
+      <br>大埔區 <label for="Taipo"><input onclick="newCuisine(this);" id="Taipo" type="radio" name="place" value="Taipo">大埔區</label>
+
+      <br>屯門區 <label for="TuenMun"><input onclick="newCuisine(this);" id="TuenMun" type="radio" name="place" value="TuenMun">屯門</label>
+
+      <br>沙田區 <label for="TaiWai"><input onclick="newCuisine(this);" id="TaiWai" type="radio" name="place" value="TaiWai">大圍</label>
+      <label for="ShaTin"><input onclick="newCuisine(this);" id="ShaTin" type="radio" name="place" value="ShaTin">沙田</label>
+      <label for="Fotan"><input onclick="newCuisine(this);" id="Fotan" type="radio" name="place" value="Fotan">火炭</label>
+      <label for="ShekMun"><input onclick="newCuisine(this);" id="ShekMun" type="radio" name="place" value="ShekMun">石門</label>
+      <label for="MaOnShan"><input onclick="newCuisine(this);" id="MaOnShan" type="radio" name="place" value="MaOnShan">馬鞍山</label>
+
+      <br>荃灣區 <label for="TsuenWan"><input onclick="newCuisine(this);" id="TsuenWan" type="radio" name="place" value="TsuenWan">荃灣區</label>
+
+      <br>葵涌區 <label for="KwaiChung"><input onclick="newCuisine(this);" id="KwaiChung" type="radio" name="place" value="KwaiChung">葵涌</label>
+      <label for="KwaiFong"><input onclick="newCuisine(this);" id="KwaiFong" type="radio" name="place" value="KwaiFong">葵芳</label>
+
+      <br>西貢區 <label for="TseungKwanO"><input onclick="newCuisine(this);" id="TseungKwanO" type="radio" name="place" value="TseungKwanO">將軍澳/坑口/寶琳</label>
+      <label for="SaiKung"><input onclick="newCuisine(this);" id="SaiKung" type="radio" name="place" value="SaiKung">西貢</label>
+
+      <br>離島區 <label for="Island"><input onclick="newCuisine(this);" id="Island" type="radio" name="place" value="Island">離島區</label>
+</div>
+
+ <!--九龍-->
+<div id="KL">
+  <u>九龍</u>：
+      <br>九龍城區 <label for="KowloonCity"><input onclick="newCuisine(this);" id="KowloonCity" type="radio" name="place" value="KowloonCity">九龍城</label>
+      <label for="KowloonTong"><input onclick="newCuisine(this);" id="KowloonTong" type="radio" name="place" value="KowloonTong">九龍塘/何文田</label>
+      <label for="ToKwaWan"><input onclick="newCuisine(this);" id="ToKwaWan" type="radio" name="place" value="ToKwaWan">土瓜灣</label>
+      <label for="HungHom"><input onclick="newCuisine(this);" id="HungHom" type="radio" name="place" value="HungHom">紅磡</label>
+
+      <br>油尖旺區 <label for="Jordan"><input onclick="newCuisine(this);" id="Jordan" type="radio" name="place" value="Jordan">佐敦</label>
+      <label for="TaiKokTsui"><input onclick="newCuisine(this);" id="TaiKokTsui" type="radio" name="place" value="TaiKokTsui">大角咀</label>
+      <label for="PrinceEdward"><input onclick="newCuisine(this);" id="PrinceEdward" type="radio" name="place" value="PrinceEdward">太子</label>
+      <label for="TsimShaTsui"><input onclick="newCuisine(this);" id="TsimShaTsui" type="radio" name="place" value="TsimShaTsui">尖沙咀</label>
+      <label for="MongKok"><input onclick="newCuisine(this);" id="MongKok" type="radio" name="place" value="MongKok">旺角</label>
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label for="YauMaTei"><input onclick="newCuisine(this);" id="YauMaTei" type="radio" name="place" value="YauMaTei">油麻地</label>
+
+      <br>深水埗區 <label for="ShamShuiPo"><input onclick="newCuisine(this);" id="ShamShuiPo" type="radio" name="place" value="ShamShuiPo">深水埗</label>
+      <label for="ShekKipMei"><input onclick="newCuisine(this);" id="ShekKipMei" type="radio" name="place" value="ShekKipMei">石硤尾</label>
+      <label for="MeiFoo"><input onclick="newCuisine(this);" id="MeiFoo" type="radio" name="place" value="MeiFoo">美孚/荔枝角</label>
+      <label for="CheungShaWan"><input onclick="newCuisine(this);" id="CheungShaWan" type="radio" name="place" value="CheungShaWan">長沙灣</label>
+
+      <br>觀塘區 <label for="KwunTong"><input onclick="newCuisine(this);" id="KwunTong" type="radio" name="place" value="KwunTong">觀塘</label>
+      <label for="KowloonBay"><input onclick="newCuisine(this);" id="KowloonBay" type="radio" name="place" value="KowloonBay">九龍灣</label>
+      <label for="LamTin/油塘/秀茂坪"><input onclick="newCuisine(this);" id="藍田/油塘/LamTin" type="radio" name="place" value="LamTin/油塘/秀茂坪">藍田/油塘/秀茂坪</label>
+      <label for="NgauTauKok"><input onclick="newCuisine(this);" id="NgauTauKok" type="radio" name="place" value="NgauTauKok">牛頭角</label>
+
+      <br>黃大仙區<label for="DiamondHill"><input onclick="newCuisine(this);" id="DiamondHill" type="radio" name="place" value="DiamondHill">黃大仙/鑽石山/慈雲山</label>
+      <label for="SanPoKong"><input onclick="newCuisine(this);" id="SanPoKong" type="radio" name="place" value="SanPoKong">新蒲崗/樂富</label>
+<br><br><br><br><br>
+</div>
+
+ <!--香港島-->
+<div id="HKI">
+ <u>香港島</u>：
+      <br>中西區 <label for="SheungWan"><input onclick="newCuisine(this);" id="SheungWan" type="radio" name="place" value="SheungWan">上環</label>
+      <label for="Central"><input onclick="newCuisine(this);" id="Central" type="radio" name="place" value="Central">中環/半山/金鐘</label>
+      <label for="KennedyTown"><input onclick="newCuisine(this);" id="KennedyTown" type="radio" name="place" value="KennedyTown">堅尼地城/石塘咀</label>
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label for="SaiWan"><input onclick="newCuisine(this);" id="SaiWan" type="radio" name="place" value="SaiWan">西環/西營盤</label>
+
+      <br>南區 <label for="PokFuLam"><input onclick="newCuisine(this);" id="PokFuLam" type="radio" name="place" value="PokFuLam">薄扶林/香港仔/鴨脷洲/黃竹坑</label>
+
+      <br>東區 <label for="NorthPoint"><input onclick="newCuisine(this);" id="NorthPoint" type="radio" name="place" value="NorthPoint">北角</label>
+      <label for="Tinhau"><input onclick="newCuisine(this);" id="Tinhau" type="radio" name="place" value="Tinhau">天后</label>
+      <label for="TaiKoo"><input onclick="newCuisine(this);" id="TaiKoo" type="radio" name="place" value="TaiKoo">太古/小西灣/杏花邨</label>
+      <label for="ChaiWan"><input onclick="newCuisine(this);" id="ChaiWan" type="radio" name="place" value="ChaiWan">柴灣</label>
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;
+      <label for="FortressHill"><input onclick="newCuisine(this);" id="FortressHill" type="radio" name="place" value="FortressHill">炮台山</label>
+      <label for="ShauKeiWan"><input onclick="newCuisine(this);" id="ShauKeiWan" type="radio" name="place" value="ShauKeiWan">筲箕灣</label>
+      <label for="SaiWanHo"><input onclick="newCuisine(this);" id="SaiWanHo" type="radio" name="place" value="SaiWanHo">西灣河</label>
+      <label for="QuarryBay"><input onclick="newCuisine(this);" id="QuarryBay" type="radio" name="place" value="QuarryBay">鰂魚涌</label>
+
+      <br>灣仔區 <label for="TaiHang"><input onclick="newCuisine(this);" id="TaiHang" type="radio" name="place" value="TaiHang">大坑</label>
+      <label for="WanChai"><input onclick="newCuisine(this);" id="WanChai" type="radio" name="place" value="WanChai">灣仔</label>
+      <label for="CausewayBay"><input onclick="newCuisine(this);" id="CausewayBay" type="radio" name="place" value="CausewayBay">跑馬地/銅鑼灣</label>
+<br><br><br><br><br>
+</div>
+
+      <!--
+<br>
+<form action="comment_page.php" method="post">
+    Enter Your Text Here:<br>
+    <input type="text" name="textdata"><br>
+    <input type="submit" name="submit">
+    */
+  </form>
+  !-->
+
+
+
+    </p>
+  </body>
+
+</html>
